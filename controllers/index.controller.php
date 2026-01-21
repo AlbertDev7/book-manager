@@ -1,6 +1,5 @@
 <?php
-require 'data.php';
 
-view('index', [
-  'books' => $books
-]);
+$books = (new DB)->books();
+
+view('index', compact('books'));
